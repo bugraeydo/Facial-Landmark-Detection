@@ -64,37 +64,46 @@ function App() {
       }
     };
     runFacemesh();
-  return (
-    <div className="App">
-       <header className="App-header">
-      <Webcam ref={webcamRef} style={{
-          position: "absolute",
-          marginLeft: "auto",
-          marginRight: "auto",
-          left: 0,
-          right: 0,
-          textAlign: "center",
-          zindex: 9,
-          width: 640,
-          height: 480,
-      }} />
-        <canvas
-          ref={canvasRef}
-          style={{
-            position: "absolute",
-            marginLeft: "auto",
-            marginRight: "auto",
-            left: 0,
-            right: 0,
-            textAlign: "center",
-            zindex: 9,
-            width: 640,
-            height: 480,
-          }}
-        />
-          </header>
-    </div>
-  );
+    return (
+      <div className="App">
+        <header className="App-header">
+          <h1 style={{ margin: "20px" }}>This is a test</h1> {"test for website"}
+        </header>
+        <div className="webcam-container">
+          <Webcam
+            ref={webcamRef}
+            style={{
+              position: "absolute",
+              marginLeft: "auto",
+              marginRight: "auto",
+              left: 0,
+              right: 0,
+              textAlign: "center",
+              zIndex: 9,
+              width: 640,
+              height: 480,
+              top: "100px", // Adjust the top value as per your preference
+            }}
+          />
+          <canvas
+            ref={canvasRef}
+            style={{
+              position: "absolute",
+              marginLeft: "auto",
+              marginRight: "auto",
+              left: 0,
+              right: 0,
+              textAlign: "center",
+              zIndex: 9,
+              width: 640,
+              height: 480,
+              top: "100px", // Adjust the top value as per your preference
+            }}
+          />
+        </div>
+      </div>
+    );
+    
 }
 
 export default App;
